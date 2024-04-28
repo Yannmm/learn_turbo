@@ -1919,3 +1919,427 @@ Processing by MessagesController#update as TURBO_STREAM
 Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 13.4ms | Allocations: 3287)
 
 
+Started POST "/messages" for 127.0.0.1 at 2024-04-28 20:38:40 +0800
+Processing by MessagesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "message"=>{"body"=>"123123123"}, "commit"=>"Create Message"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mMessage Create (1.4ms)[0m  [1m[32mINSERT INTO "messages" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "123123123"], ["created_at", "2024-04-28 12:38:40.444654"], ["updated_at", "2024-04-28 12:38:40.444654"]]
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  Rendered messages/_message.html.erb (Duration: 0.6ms | Allocations: 983)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.2ms | Allocations: 3412)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"messages", :id=>nil}, missing required keys: [:id]):
+    3:     <strong>Body:</strong>
+    4:     <%= message.body %>
+    5:   </p>
+    6:   <%= button_to "Edit this message", edit_message_path(message), method: :post %>|<%= button_to "Destroy this message", message_path(message), method: :delete %>
+    7: </div>
+  
+app/views/messages/_message.html.erb:6
+app/controllers/messages_controller.rb:35:in `block (2 levels) in create'
+app/controllers/messages_controller.rb:31:in `create'
+Started GET "/messages" for 127.0.0.1 at 2024-04-28 20:40:03 +0800
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_form.html.erb (Duration: 0.7ms | Allocations: 901)
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC[0m
+  ↳ app/views/messages/index.html.erb:7
+  Rendered messages/_message.html.erb (Duration: 0.3ms | Allocations: 426)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 2.3ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 6234)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 21536)
+Completed 200 OK in 25ms (Views: 17.7ms | ActiveRecord: 4.7ms | Allocations: 23927)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-04-28 20:40:08 +0800
+Processing by MessagesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "message"=>{"body"=>"21312ee112323"}, "commit"=>"Create Message"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mMessage Create (2.0ms)[0m  [1m[32mINSERT INTO "messages" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "21312ee112323"], ["created_at", "2024-04-28 12:40:08.608619"], ["updated_at", "2024-04-28 12:40:08.608619"]]
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  Rendered messages/_message.html.erb (Duration: 0.8ms | Allocations: 984)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.6ms | Allocations: 3637)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"messages", :id=>nil}, missing required keys: [:id]):
+    3:     <strong>Body:</strong>
+    4:     <%= message.body %>
+    5:   </p>
+    6:   <%= button_to "Edit this message", edit_message_path(message), method: :post %>|<%= button_to "Destroy this message", message_path(message), method: :delete %>
+    7: </div>
+  
+app/views/messages/_message.html.erb:6
+app/controllers/messages_controller.rb:35:in `block (2 levels) in create'
+app/controllers/messages_controller.rb:31:in `create'
+Started GET "/messages" for 127.0.0.1 at 2024-04-28 20:41:29 +0800
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_form.html.erb (Duration: 0.6ms | Allocations: 901)
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC[0m
+  ↳ app/views/messages/index.html.erb:7
+  Rendered messages/_message.html.erb (Duration: 0.3ms | Allocations: 426)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 6590)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 21912)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 3.8ms | Allocations: 24304)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-04-28 20:41:33 +0800
+Processing by MessagesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "message"=>{"body"=>"12312222"}, "commit"=>"Create Message"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mMessage Create (1.4ms)[0m  [1m[32mINSERT INTO "messages" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "12312222"], ["created_at", "2024-04-28 12:41:33.424297"], ["updated_at", "2024-04-28 12:41:33.424297"]]
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  Rendered messages/_form.html.erb (Duration: 0.9ms | Allocations: 397)
+  Rendered messages/_message.html.erb (Duration: 0.5ms | Allocations: 241)
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 3489)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-04-28 20:41:39 +0800
+Processing by MessagesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "message"=>{"body"=>"hahaha, let's googogogo"}, "commit"=>"Create Message"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mMessage Create (1.6ms)[0m  [1m[32mINSERT INTO "messages" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "hahaha, let's googogogo"], ["created_at", "2024-04-28 12:41:39.622174"], ["updated_at", "2024-04-28 12:41:39.622174"]]
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  Rendered messages/_form.html.erb (Duration: 1.2ms | Allocations: 397)
+  Rendered messages/_message.html.erb (Duration: 0.7ms | Allocations: 241)
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 3224)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-04-28 20:45:32 +0800
+  
+SyntaxError (/Volumes/CHIPFANCIER/ror_practices/learn_turbo/app/controllers/messages_controller.rb:42: syntax error, unexpected local variable or method, expecting ']'
+            turbo_stream.update('message_counter', ht...
+            ^~~~~~~~~~~~
+/Volumes/CHIPFANCIER/ror_practices/learn_turbo/app/controllers/messages_controller.rb:43: syntax error, unexpected ']', expecting `end'
+          ]
+          ^
+):
+  
+app/controllers/messages_controller.rb:42: syntax error, unexpected local variable or method, expecting ']'
+app/controllers/messages_controller.rb:43: syntax error, unexpected ']', expecting `end'
+Started GET "/messages" for 127.0.0.1 at 2024-04-28 20:45:56 +0800
+  
+SyntaxError (/Volumes/CHIPFANCIER/ror_practices/learn_turbo/app/controllers/messages_controller.rb:42: syntax error, unexpected local variable or method, expecting ']'
+            turbo_stream.update('message_counter', ht...
+            ^~~~~~~~~~~~
+/Volumes/CHIPFANCIER/ror_practices/learn_turbo/app/controllers/messages_controller.rb:43: syntax error, unexpected ']', expecting `end'
+          ]
+          ^
+):
+  
+app/controllers/messages_controller.rb:42: syntax error, unexpected local variable or method, expecting ']'
+app/controllers/messages_controller.rb:43: syntax error, unexpected ']', expecting `end'
+Started GET "/messages" for 127.0.0.1 at 2024-04-28 20:46:32 +0800
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_form.html.erb (Duration: 1.2ms | Allocations: 901)
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC[0m
+  ↳ app/views/messages/index.html.erb:11
+  Rendered messages/_message.html.erb (Duration: 0.5ms | Allocations: 426)
+  Rendered messages/_message.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.3ms | Allocations: 239)
+  Rendered messages/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 7262)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 22631)
+Completed 200 OK in 29ms (Views: 21.2ms | ActiveRecord: 4.5ms | Allocations: 25023)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-04-28 20:46:44 +0800
+Processing by MessagesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "message"=>{"body"=>"123123"}, "commit"=>"Create Message"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mMessage Create (1.8ms)[0m  [1m[32mINSERT INTO "messages" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "123123"], ["created_at", "2024-04-28 12:46:44.384009"], ["updated_at", "2024-04-28 12:46:44.384009"]]
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  Rendered messages/_form.html.erb (Duration: 1.1ms | Allocations: 397)
+  Rendered messages/_message.html.erb (Duration: 0.5ms | Allocations: 241)
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 3509)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-04-28 20:46:56 +0800
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  Rendered messages/_form.html.erb (Duration: 0.9ms | Allocations: 901)
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC[0m
+  ↳ app/views/messages/index.html.erb:11
+  Rendered messages/_message.html.erb (Duration: 0.4ms | Allocations: 426)
+  Rendered messages/_message.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered messages/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 7577)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 22794)
+Completed 200 OK in 23ms (Views: 14.2ms | ActiveRecord: 5.7ms | Allocations: 25188)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-04-28 20:46:59 +0800
+Processing by MessagesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "message"=>{"body"=>"123123"}, "commit"=>"Create Message"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mMessage Create (1.6ms)[0m  [1m[32mINSERT INTO "messages" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "123123"], ["created_at", "2024-04-28 12:46:59.732306"], ["updated_at", "2024-04-28 12:46:59.732306"]]
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  Rendered messages/_form.html.erb (Duration: 1.1ms | Allocations: 397)
+  Rendered messages/_message.html.erb (Duration: 0.4ms | Allocations: 241)
+  [1m[36mMessage Count (5.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:41:in `block (2 levels) in create'
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 13)
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 7.7ms | Allocations: 4517)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-04-28 20:47:10 +0800
+Processing by MessagesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "message"=>{"body"=>"this is so cool"}, "commit"=>"Create Message"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mMessage Create (12.5ms)[0m  [1m[32mINSERT INTO "messages" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "this is so cool"], ["created_at", "2024-04-28 12:47:10.878333"], ["updated_at", "2024-04-28 12:47:10.878333"]]
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  Rendered messages/_form.html.erb (Duration: 1.7ms | Allocations: 481)
+  Rendered messages/_message.html.erb (Duration: 0.5ms | Allocations: 252)
+  [1m[36mMessage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:41:in `block (2 levels) in create'
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 3)
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 13.5ms | Allocations: 4334)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-04-28 20:47:29 +0800
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages"[0m
+  ↳ app/views/messages/index.html.erb:5
+  Rendered messages/_form.html.erb (Duration: 0.7ms | Allocations: 901)
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC[0m
+  ↳ app/views/messages/index.html.erb:12
+  Rendered messages/_message.html.erb (Duration: 0.3ms | Allocations: 425)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 8947)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 24252)
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 7.3ms | Allocations: 26646)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-04-28 20:47:33 +0800
+Processing by MessagesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "message"=>{"body"=>"good, hakdkd"}, "commit"=>"Create Message"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mMessage Create (7.8ms)[0m  [1m[32mINSERT INTO "messages" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "good, hakdkd"], ["created_at", "2024-04-28 12:47:33.759612"], ["updated_at", "2024-04-28 12:47:33.759612"]]
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  Rendered messages/_form.html.erb (Duration: 0.7ms | Allocations: 397)
+  Rendered messages/_message.html.erb (Duration: 0.3ms | Allocations: 241)
+  [1m[36mMessage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:41:in `block (2 levels) in create'
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 50ms (Views: 0.1ms | ActiveRecord: 9.2ms | Allocations: 4209)
+
+
+Started DELETE "/messages/19" for 127.0.0.1 at 2024-04-28 20:48:28 +0800
+Processing by MessagesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"19"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:97:in `set_message'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:83:in `destroy'
+  [1m[36mMessage Destroy (1.5ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 19]]
+  ↳ app/controllers/messages_controller.rb:83:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:83:in `destroy'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 3389)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-04-28 20:48:30 +0800
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages"[0m
+  ↳ app/views/messages/index.html.erb:5
+  Rendered messages/_form.html.erb (Duration: 1.0ms | Allocations: 406)
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC[0m
+  ↳ app/views/messages/index.html.erb:12
+  Rendered messages/_message.html.erb (Duration: 0.6ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.5ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.5ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.4ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.4ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.6ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.4ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.3ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.3ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.3ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.3ms | Allocations: 239)
+  Rendered messages/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 5679)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 6857)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.7ms | Allocations: 7187)
+
+
+Started GET "/messages" for 127.0.0.1 at 2024-04-28 20:49:20 +0800
+Processing by MessagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages"[0m
+  ↳ app/views/messages/index.html.erb:5
+  Rendered messages/_form.html.erb (Duration: 0.6ms | Allocations: 901)
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" ORDER BY "messages"."created_at" DESC[0m
+  ↳ app/views/messages/index.html.erb:12
+  Rendered messages/_message.html.erb (Duration: 0.3ms | Allocations: 425)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.1ms | Allocations: 239)
+  Rendered messages/_message.html.erb (Duration: 0.2ms | Allocations: 239)
+  Rendered messages/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 8946)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 24297)
+Completed 200 OK in 17ms (Views: 10.9ms | ActiveRecord: 5.0ms | Allocations: 26690)
+
+
+Started GET "/messages/18" for 127.0.0.1 at 2024-04-28 20:49:23 +0800
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:100:in `set_message'
+  Rendering layout layouts/application.html.erb
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/_message.html.erb (Duration: 1.1ms | Allocations: 255)
+  Rendered messages/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 863)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2035)
+Completed 200 OK in 15ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 3628)
+
+
+Started DELETE "/messages/18" for 127.0.0.1 at 2024-04-28 20:49:24 +0800
+Processing by MessagesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"18"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:100:in `set_message'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:83:in `destroy'
+  [1m[36mMessage Destroy (1.8ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/messages_controller.rb:83:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:83:in `destroy'
+  [1m[36mMessage Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:89:in `block (2 levels) in destroy'
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 3.1ms | Allocations: 3469)
+
+
+Started DELETE "/messages/16" for 127.0.0.1 at 2024-04-28 20:49:25 +0800
+Processing by MessagesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"16"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:100:in `set_message'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:83:in `destroy'
+  [1m[36mMessage Destroy (1.7ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/messages_controller.rb:83:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:83:in `destroy'
+  [1m[36mMessage Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:89:in `block (2 levels) in destroy'
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 3)
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 3335)
+
+
+Started POST "/messages" for 127.0.0.1 at 2024-04-28 20:49:51 +0800
+Processing by MessagesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "message"=>{"body"=>"hello"}, "commit"=>"Create Message"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mMessage Create (1.9ms)[0m  [1m[32mINSERT INTO "messages" ("body", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["body", "hello"], ["created_at", "2024-04-28 12:49:51.662439"], ["updated_at", "2024-04-28 12:49:51.662439"]]
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:32:in `block in create'
+  Rendered messages/_form.html.erb (Duration: 1.4ms | Allocations: 397)
+  Rendered messages/_message.html.erb (Duration: 0.5ms | Allocations: 241)
+  [1m[36mMessage Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages"[0m
+  ↳ app/controllers/messages_controller.rb:41:in `block (2 levels) in create'
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 3)
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 4088)
+
+
+Started POST "/messages/20/edit" for 127.0.0.1 at 2024-04-28 20:49:53 +0800
+Processing by MessagesController#edit as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"20"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:100:in `set_message'
+  Rendered messages/_form.html.erb (Duration: 1.7ms | Allocations: 425)
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1504)
+
+
+Started PATCH "/messages/20" for 127.0.0.1 at 2024-04-28 20:49:58 +0800
+Processing by MessagesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "message"=>{"body"=>"hello, cool gir.d"}, "commit"=>"Update Message", "id"=>"20"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:100:in `set_message'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:63:in `block in update'
+  [1m[36mMessage Update (1.6ms)[0m  [1m[33mUPDATE "messages" SET "body" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["body", "hello, cool gir.d"], ["updated_at", "2024-04-28 12:49:58.342917"], ["id", 20]]
+  ↳ app/controllers/messages_controller.rb:63:in `block in update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:63:in `block in update'
+  Rendered messages/_message.html.erb (Duration: 0.7ms | Allocations: 246)
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 3333)
+
+
